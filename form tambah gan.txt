@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <title>Nasabah</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div><span style="color:purple">Pembukaan Nasabah (CIF) Perorangan</span></div>
+        <hr/>
+        <form action="">
+            <table>
+                <tr>
+                    <td>
+                        <div>                            
+                            <label for="cif">No CIF</label>
+                            <input type="text" name="cif" id="cif" />
+                        </div>
+                        <div>
+                            <label for="cabang">Cabang</label>
+                            <select name="cabang" id="cabang">                                
+                                <option value="utama">001-Kantor Pusat</option>
+                                <option value="penuh">002-Kantor Cabang Penuh</option>
+                                <option value="pembantu">003-Kantor Cabang Pembantu</option>
+                                <option value="kas">004-Kantor Kas</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="officer">Account Officer</label>
+                            <select name="officer" id="officer">
+                                <option value="yadi">Yadi Supriadi</option>
+                                <option value="annisa">Annisa Putri</option>
+                                <option value="dadang">Dadang Sudangski</option>
+                                <option value="deby">Deby Onyetenyevwe</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="namal">Nama Lengkap</label>
+                            <input type="text" name="namal" id="namal" />
+                        </div>
+                        <div>
+                            <label for="namas">Nama Singkat</label>
+                            <input type="text" name="namas" id="namas" />
+                        </div>
+                        <div>
+                            <label for="namaa">Nama Alias</label>
+                            <input type="text" name="namaa" id="namaa" />
+                            <span style="color: red">Gunakan tanda koma (,) jika lebih dari satu nama alias</span>
+                        </div>
+                        <div>
+                            <label for="namag">Nama Gadis Ibu Kandung</label>
+                            <input type="text" name="namag" id="namag" />
+                        </div>
+                        <div>
+                            <label>Jenis Kelamin</label>
+                            <input type="radio" name="jenisKelamin" id="l" value="L"/><label for="l">Laki-laki</label>
+                            <input type="radio" name="jenisKelamin" id="p" value="P"/><label for="p">Perempuan</label>
+                        </div>
+                        <div>
+                            <label for="temlahir">Tempat dan Tgl Lahir</label>
+                            <input type="text" name="temlahir" id="temlahir" />
+                            <input type="date" name="tgllahir"/>
+                        </div>
+                    </td>
+                    <td valign="top">
+                        <div>
+                            <label for="tglbuka">Tgl Pembukaan</label>
+                            <input type="date" name="tglbuka"/>
+                        </div>
+                    </td>
+                    <td valign="top">
+                        <div>
+                            <button type="submit">Simpan</button>
+                        </div>
+                        <div>
+                            <button type="reset">Reset</button>
+                        </div>                                             
+                    </td>
+                </tr>        
+            </table>
+        <hr/>
+            <table>
+                <tr>
+                    <span style="color:purple">Info Identitas</span>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <label for="jidentitas">Jenis Identitas</label>
+                            <select name="jidentitas" id="jidentitas">                                
+                                <option value="ktp">1-KTP</option>
+                                <option value="sim">2-SIM</option>
+                                <option value="paspor">3-Paspor</option>
+                                <option value="ktm">4-KTM</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="nidentitas">No Identitas</label>
+                            <input type="text" name="nidentitas" id="nidentitas" />
+                        </div>
+                        <div>
+                            <label for="alamat">Alamat</label>
+                            <input type="text" name="alamat" id="alamat" />
+                        </div>
+                        <div>
+                            <label for="rt">RT / RW</label>
+                            <input type="text" name="rt" id="rt" /><span> /</span>
+                            <input type="text" name="rw" id="rw" />
+                        </div>
+                        <div>
+                            <label for="kel">Kelurahan</label>
+                            <input type="text" name="kel" id="kel" />
+                        </div>
+                        <div>
+                            <label for="prov">Provinsi</label>
+                            <select name="prov" id="prov">                                
+                                <option value="riau">RIAU</option>
+                                <option value="jabar">JAWA BARAT</option>
+                                <option value="jkt">DKI-JAKARTA</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="negara">Negara</label>
+                            <select name="negara" id="negara">                                
+                                <option value="ina">ID - INDONESIA</option>
+                                <option value="mas">MAS - MALAYSIA</option>
+                                <option value="sin">SIN - SINGAPORE</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <label for="mberlaku">Masa Berlaku</label>
+                            <input type="date" name="mberlaku"/>
+                        </div>
+                        <div>
+                            <label for="kpos">Kode Pos</label>
+                            <input type="text" name="kpos" id="kpos" />
+                        </div>
+                        <div>
+                            <label for="kec">Kecamatan</label>
+                            <input type="text" name="kec" id="kec" />
+                        </div>
+                        <div>
+                            <label for="kab">Kabupaten/Kota</label>
+                            <select name="kab" id="kab">                                
+                                <option value="inhu">Indragiri Hulu</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        <hr/>
+            <table>
+                <tr>
+                    <td>
+                        <div>
+                            <label for="npwp">No N P W P</label>
+                            <input type="text" name="npwp" id="npwp" />
+                        </div>
+                        <div>
+                            <label for="nohp">No Hp</label>
+                            <input type="text" name="nohp" id="nohp" />
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <label for="ket">Keterangan</label>
+                            <input type="text" name="ket" id="ket" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <hr/>
+            <!--<table border="1">
+        <div>
+                <thead>
+                    <tr>
+                        <td>No</td>
+                        <td>Nama Lengkap</td>
+                        <td>Nomor CIF</td>
+                        <td>Acc Officer</td>
+                        <td>Tgl Buka</td>                        
+                        <td>Jenis Kelamin</td>
+                        <td>Hapus</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="mst: ${list}">
+                        <td th:text="${mst[0]}">1</td>
+                        <td th:text="${mst[1]}">2</td>
+                        <td th:text="${mst[2]}">3</td>
+                        <td th:text="${mst[3]}">4</td>
+                        <td th:text="${mst[4]}">5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>-->
+    </body>
+</html>

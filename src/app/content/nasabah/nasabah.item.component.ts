@@ -13,7 +13,7 @@ import {Nasabah} from './nasabah.model';
             <td>{{nasabahs?.jenisKelamin}}</td>
             <td>
                 <button class="glyphicon glyphicon-trash btn btn-primary btn-sm" (click)="delete(nasabahs?.noCif)"></button>
-                <button class="glyphicon glyphicon-edit btn btn-primary btn-sm"></button>
+                <button class="glyphicon glyphicon-edit btn btn-primary btn-sm" [routerLink]="['edit', nasabahs.noCif]"></button>
             </td>
     `
 })

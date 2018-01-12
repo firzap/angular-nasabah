@@ -1,0 +1,168 @@
+<div><span style="color:purple">Pembukaan Nasabah (CIF) Perorangan</span></div>
+<hr/>
+<form class="form-horizontal" (submit)="submitData(nasabahForm)" #nasabahForm="ngForm">
+  <table>
+    <tr>
+      <td>
+        <div>
+          <label for="noCif">No CIF</label>
+          <input type="text" name="noCif" id="noCif" [(ngModel)]="nasabah.noCif" />
+        </div>
+        <div>
+          <label for="cabang">Cabang</label>
+          <select name="cabang" id="cabang" [(ngModel)]="nasabah.cabang">                                
+                                <option value="utama">001-Kantor Pusat</option>
+                                <option value="penuh">002-Kantor Cabang Penuh</option>
+                                <option value="pembantu">003-Kantor Cabang Pembantu</option>
+                                <option value="kas">004-Kantor Kas</option>
+                            </select>
+        </div>
+        <div>
+          <label for="accOfficer">Account Officer</label>
+          <select name="accOfficer" id="accOfficer" [(ngModel)]="nasabah.accOfficer">
+                                <option value="Yadi Supriadi">Yadi Supriadi</option>
+                                <option value="Annisa Putri">Annisa Putri</option>
+                                <option value="Dadang Sudangski">Dadang Sudangski</option>
+                                <option value="Deby Onyetenyevwe">Deby Onyetenyevwe</option>
+                            </select>
+        </div>
+        <div>
+          <label for="namaLengkap">Nama Lengkap</label>
+          <input type="text" name="namaLengkap" id="namaLengkap" [(ngModel)]="nasabah.namaLengkap"/>
+        </div>
+        <div>
+          <label for="namaSingkat">Nama Singkat</label>
+          <input type="text" name="namaSingkat" id="namaSingkat" [(ngModel)]="nasabah.namaSingkat"/>
+        </div>
+        <div>
+          <label for="namaAlias">Nama Alias</label>
+          <input type="text" name="namaAlias" id="namaAlias" [(ngModel)]="nasabah.namaAlias"/>
+          <span style="color: red">Gunakan tanda koma (,) jika lebih dari satu nama alias</span>
+        </div>
+        <div>
+          <label for="namaIbu">Nama Gadis Ibu Kandung</label>
+          <input type="text" name="namaIbu" id="namaIbu" [(ngModel)]="nasabah.namaIbu"/>
+        </div>
+        <div>
+          <label>Jenis Kelamin</label>
+          <input type="radio" name="jenisKelamin" id="l" value="L" [(ngModel)]="nasabah.jenisKelamin"/><label for="l">Laki-laki</label>
+          <input type="radio" name="jenisKelamin" id="p" value="P" [(ngModel)]="nasabah.jenisKelamin"/><label for="p">Perempuan</label>
+        </div>
+        <div>
+          <label for="tempatLahir">Tempat dan Tgl Lahir</label>
+          <input type="text" name="tempatLahir" id="tempatLahir" [(ngModel)]="nasabah.tempatLahir"/>
+          <input type="date" name="tglLahir" id="tglLahir" [(ngModel)]="nasabah.tglLahir"/>
+        </div>
+      </td>
+      <td valign="top">
+        <div>
+          <label for="tglBukaRek">Tgl Pembukaan</label>
+          <input type="date" name="tglBukaRek" id="tglBukaRek" [(ngModel)]="nasabah.tglBukaRek"/>
+        </div>
+      </td>
+      <td valign="top">
+        <div>
+          <button type="submit" [disabled]="!nasabahForm.valid" class="btn btn-primary">Simpan</button>
+        </div>
+        <div>
+          <button type="reset" class="btn btn-warning">Reset</button>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <br/>
+  <table>
+    <tr>
+      <span style="color:purple">Info Identitas</span>
+      <hr/>
+    </tr>
+    <tr>
+      <td>
+        <div>
+          <label for="jenisId">Jenis Identitas</label>
+          <select name="jenisId" id="jenisId" [(ngModel)]="nasabah.jenisId">                                
+                                <option value="ktp">1-KTP</option>
+                                <option value="sim">2-SIM</option>
+                                <option value="paspor">3-Paspor</option>
+                                <option value="ktm">4-KTM</option>
+                            </select>
+        </div>
+        <div>
+          <label for="noId">No Identitas</label>
+          <input type="text" name="noId" id="noId" [(ngModel)]="nasabah.noId"/>
+        </div>
+        <div>
+          <label for="alamat">Alamat</label>
+          <input type="text" name="alamat" id="alamat" [(ngModel)]="nasabah.alamat"/>
+        </div>
+        <div>
+          <label for="rt">RT / RW</label>
+          <input type="text" name="rt" id="rt" [(ngModel)]="nasabah.rt"/><span> /</span>
+          <input type="text" name="rw" id="rw" [(ngModel)]="nasabah.rw"/>
+        </div>
+        <div>
+          <label for="kel">Kelurahan</label>
+          <input type="text" name="kel" id="kel" [(ngModel)]="nasabah.kel"/>
+        </div>
+        <div>
+          <label for="prov">Provinsi</label>
+          <select name="prov" id="prov" [(ngModel)]="nasabah.prov">                                
+                                <option value="riau">RIAU</option>
+                                <option value="jabar">JAWA BARAT</option>
+                                <option value="jkt">DKI-JAKARTA</option>
+                            </select>
+        </div>
+        <div>
+          <label for="negara">Negara</label>
+          <select name="negara" id="negara" [(ngModel)]="nasabah.negara">                                
+                                <option value="ina">ID - INDONESIA</option>
+                                <option value="mas">MAS - MALAYSIA</option>
+                                <option value="sin">SIN - SINGAPORE</option>
+                            </select>
+        </div>
+      </td>
+      <td>
+        <div>
+          <label for="masaBerlaku">Masa Berlaku</label>
+          <input type="date" name="masaBerlaku" id="masaBerlaku" [(ngModel)]="nasabah.masaBerlaku"/>
+        </div>
+        <div>
+          <label for="kodePos">Kode Pos</label>
+          <input type="text" name="kodePos" id="kodePos" [(ngModel)]="nasabah.kodePos"/>
+        </div>
+        <div>
+          <label for="kec">Kecamatan</label>
+          <input type="text" name="kec" id="kec" [(ngModel)]="nasabah.kec"/>
+        </div>
+        <div>
+          <label for="kab">Kabupaten/Kota</label>
+          <select name="kab" id="kab" [(ngModel)]="nasabah.kab">                                
+                                <option value="inhu">Indragiri Hulu</option>
+                            </select>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <hr/>
+  <table>
+    <tr>
+      <td>
+        <div>
+          <label for="npwp">No N P W P</label>
+          <input type="text" name="npwp" id="npwp" [(ngModel)]="nasabah.npwp"/>
+        </div>
+        <div>
+          <label for="noHp">No Hp</label>
+          <input type="text" name="noHp" id="noHp" [(ngModel)]="nasabah.noHp"/>
+        </div>
+      </td>
+      <td>
+        <div>
+          <label for="ket">Keterangan</label>
+          <input type="text" name="ket" id="ket" [(ngModel)]="nasabah.ket"/>
+        </div>
+      </td>
+    </tr>
+  </table>
+</form>
+<br/>
